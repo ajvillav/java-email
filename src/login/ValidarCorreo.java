@@ -14,6 +14,7 @@ public class ValidarCorreo {
 
         } else {
             System.out.println("Error");
+            
         }
 
     }
