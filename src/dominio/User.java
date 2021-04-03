@@ -1,10 +1,28 @@
-package login;
+package dominio;
 
 import java.util.Scanner;
 
 public class User {
-    String email;
-    String pass;
+    private String email;
+    private String  pass;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+    
+    
    
     public void createEmail() {
         Scanner consola = new Scanner(System.in);
@@ -16,15 +34,15 @@ public class User {
         String username = consola.nextLine();
 
         if (extention.equals("1") || extention.equals("@hotmail.com")) {
-            this.email = username + "@hotmail.com";
+            email = username + "@hotmail.com";
         } else if ("2".equals(extention) || "@gmail.com".equals(extention)) {
-            this.email = username + "@gmail.com";
+            email = username + "@gmail.com";
         }
 
-        System.out.println("email = " + this.email);
+        System.out.println("email = " + email);
 
         System.out.println("Create your password:");
-        this.pass = consola.nextLine();
+        pass = consola.nextLine();
 
         System.out.println("Email has been correctly created");
     }

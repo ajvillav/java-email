@@ -1,5 +1,6 @@
 package login;
 
+import dominio.User;
 import java.util.Scanner;
 
 public class TestLogin {
@@ -9,7 +10,7 @@ public class TestLogin {
         Scanner consola = new Scanner(System.in);
         User validate = new User();
 
-        System.out.println("Now we are going to create and login a mail");
+        System.out.println("Now we are going to create and login a mail:");
         validate.createEmail();
 
         while (true) {
@@ -19,7 +20,7 @@ public class TestLogin {
             System.out.println("Please type your password:");
             String pass = consola.nextLine();
 
-            if (validate.email.equals(email) && validate.pass.equals(pass)) {
+            if (email.equals(validate.getEmail()) && pass.equals(validate.getPass())) {
                 System.out.println("You have logged in correctly");
                 break;
             } else {
