@@ -2,16 +2,11 @@ package login;
 
 import java.util.Scanner;
 
-public class CreateEmail {
+public class User {
     String email;
     String pass;
-
-  
-    public CreateEmail() {
-    }
-
-    
-    public void test() {
+   
+    public void createEmail() {
         Scanner consola = new Scanner(System.in);
 
         System.out.println("Choose your extention:\n1. @hotmail.com\n2. @gmail.com");
